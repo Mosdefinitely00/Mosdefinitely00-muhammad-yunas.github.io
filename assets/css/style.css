@@ -1,200 +1,221 @@
-:root {
-  --bg: #120b05;
-  --text: #f7e7bf;
-  --accent: #d4af37;
-  --accent-2: #f5d77a;
-  --surface: #1f1408;
-  --border: #5c4520;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Muhammad Yunas – Physical AI & GTM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-* {
-  box-sizing: border-box;
-}
+  <!-- SEO basics -->
+  <meta name="description" content="Muhammad Yunas – Senior Product Marketing leader in Physical AI, Industrial AI, and GTM strategy." />
 
-html {
-  scroll-behavior: smooth;
-}
+  <!-- Open Graph -->
+  <meta property="og:title" content="Muhammad Yunas – Physical AI & GTM" />
+  <meta property="og:description" content="Executive portfolio for Physical AI, Industrial AI, and GTM leadership." />
+  <meta property="og:url" content="https://muhammad-yunas.com" />
+  <meta property="og:type" content="website" />
 
-body {
-  margin: 0;
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
-  background:
-    radial-gradient(circle at top, rgba(212, 175, 55, 0.12), transparent 35%),
-    linear-gradient(180deg, #120b05 0%, #0d0904 100%);
-  color: var(--text);
-  line-height: 1.65;
-}
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NG2H7GWNJN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NG2H7GWNJN');
+  </script>
 
-.container {
-  width: min(1100px, 92%);
-  margin: 0 auto;
-}
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-mark">MY</div>
+    <nav class="top-nav">
+      <a href="#about">About</a>
+      <a href="#story">Story</a>
+      <a href="#work">Work</a>
+      <a href="#portfolio">Visual Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-.narrow {
-  width: min(820px, 92%);
-}
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-left">
+      <p class="hero-kicker">Physical AI · Industrial AI · GTM</p>
+      <h1 class="hero-title">Muhammad Yunas</h1>
+      <p class="hero-subtitle">Senior Product Marketing & GTM Leader</p>
+      <p class="hero-tagline">
+        I design and launch systems where <span class="tagline-highlight">sense, analyze, and act</span> are not buzzwords—they’re the operating model.
+      </p>
 
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background: rgba(18, 11, 5, 0.92);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.22);
-  backdrop-filter: blur(10px);
-}
+      <div class="hero-cta-row">
+        <a href="/assets/resume.pdf"
+           class="btn btn-primary"
+           target="_blank"
+           rel="noopener"
+           onclick="gtag('event', 'resume_download', { event_category: 'engagement' });">
+          Download Resume
+        </a>
+        <a href="mailto:Yunasmuh@gmail.com" class="btn btn-secondary">
+          Email
+        </a>
+      </div>
 
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.95rem 0;
-}
+      <div class="hero-links">
+        <a href="https://www.linkedin.com/in/muhammad-yunas"
+           target="_blank"
+           rel="noopener"
+           onclick="gtag('event', 'linkedin_click', { event_category: 'engagement' });">
+          LinkedIn
+        </a>
+        <span class="hero-separator">·</span>
+        <a href="https://muhammad-yunas.com"
+           target="_blank"
+           rel="noopener"
+           onclick="gtag('event', 'website_click', { event_category: 'engagement' });">
+          Website
+        </a>
+      </div>
+    </div>
 
-.brand,
-a {
-  color: var(--text);
-  text-decoration: none;
-}
+    <div class="hero-right">
+      <div class="persona-wrapper">
+        <img src="assets/persona.png"
+             alt="Executive portrait of Muhammad Yunas"
+             class="persona-image" />
+      </div>
+    </div>
+  </section>
 
-.brand {
-  font-weight: 800;
-  letter-spacing: 0.03em;
-  color: var(--accent-2);
-}
+  <!-- NARRATION BUBBLE (BOTTOM RIGHT) -->
+  <div id="personaNarration" class="persona-narration"></div>
 
-.nav-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>About</h2>
+    <p>
+      I operate at the intersection of Physical AI, Industrial AI, and GTM strategy—translating complex systems into narratives
+      that executives can act on and operators can trust.
+    </p>
+  </section>
 
-.nav-list a:hover,
-a:hover,
-a:focus-visible {
-  color: var(--accent-2);
-}
+  <!-- STORY -->
+  <section id="story" class="section">
+    <h2>Story</h2>
+    <p>
+      My work centers on building clarity in environments where telemetry, signals, and constraints collide. I focus on
+      narrative, positioning, and system design that make transformation feel inevitable instead of optional.
+    </p>
+  </section>
 
-.section {
-  padding: 4.2rem 0;
-}
+  <!-- WORK -->
+  <section id="work" class="section">
+    <h2>Selected Work</h2>
+    <p>
+      From industrial platforms to Physical AI deployments, I’ve led GTM and product marketing motions that align
+      executive intent with operational reality.
+    </p>
+  </section>
 
-.hero {
-  padding: 6.5rem 0 4.5rem;
-}
+  <!-- CASE STUDY -->
+  <section id="case-study" class="section">
+    <h2>Case Study: Sense · Analyze · Act</h2>
+    <p>
+      A transformation program where sensing infrastructure, analytical models, and action layers were unified into a single
+      narrative and operating rhythm—reducing friction, increasing adoption, and clarifying value.
+    </p>
+  </section>
 
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: var(--accent-2);
-  font-weight: 800;
-  margin-bottom: 0.65rem;
-}
+  <!-- SENSE · ANALYZE · ACT -->
+  <section id="sense-analyze-act" class="section">
+    <h2>Sense · Analyze · Act</h2>
+    <p>
+      Precision isn’t optional—it’s the operating system. I design GTM and product narratives that respect constraints,
+      elevate signals, and make decisions feel grounded instead of speculative.
+    </p>
+  </section>
 
-h1,
-h2,
-h3,
-h4 {
-  margin-top: 0;
-  line-height: 1.15;
-}
+  <!-- VISUAL PORTFOLIO (CARDS MOVED HERE) -->
+  <section id="portfolio" class="section">
+    <h2>Visual Portfolio</h2>
+    <p>Every frame is a signal. Every signal tells a story.</p>
 
-h1 {
-  font-size: clamp(2.5rem, 6vw, 4.4rem);
-  color: #fff4d0;
-}
+    <div class="portfolio-grid">
+      <article class="portfolio-card">
+        <h3>Industrial Cinematic</h3>
+        <p>Visual language tuned to industrial systems, telemetry, and motion.</p>
+      </article>
+      <article class="portfolio-card">
+        <h3>Executive Gold</h3>
+        <p>Premium aesthetic that aligns with boardroom expectations and operator reality.</p>
+      </article>
+      <article class="portfolio-card">
+        <h3>Signals & Telemetry</h3>
+        <p>Frames that highlight data as narrative, not noise.</p>
+      </article>
+      <article class="portfolio-card">
+        <h3>Story Arc</h3>
+        <p>Visual sequences that carry a clear before/after transformation story.</p>
+      </article>
+    </div>
+  </section>
 
-h2 {
-  color: var(--accent-2);
-  font-size: clamp(1.25rem, 3vw, 2.1rem);
-}
+  <!-- CONTACT -->
+  <section id="contact" class="section section-contact">
+    <h2>Contact</h2>
+    <p>Good work. Let’s continue building forward.</p>
 
-h3 {
-  font-size: 1.9rem;
-  margin-bottom: 1rem;
-  color: #fff0c2;
-}
+    <div class="contact-links">
+      <a href="mailto:Yunasmuh@gmail.com" class="btn btn-primary">Email</a>
+      <a href="https://www.linkedin.com/in/muhammad-yunas"
+         target="_blank"
+         rel="noopener"
+         class="btn btn-secondary"
+         onclick="gtag('event', 'linkedin_click', { event_category: 'engagement' });">
+        LinkedIn
+      </a>
+      <a href="https://muhammad-yunas.com"
+         target="_blank"
+         rel="noopener"
+         class="btn btn-secondary"
+         onclick="gtag('event', 'website_click', { event_category: 'engagement' });">
+        Website
+      </a>
+      <a href="/assets/resume.pdf"
+         target="_blank"
+         rel="noopener"
+         class="btn btn-secondary"
+         onclick="gtag('event', 'resume_download', { event_category: 'engagement' });">
+        Download Resume
+      </a>
+    </div>
+  </section>
 
-h4 {
-  color: #fff0c2;
-}
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="mailto:Yunasmuh@gmail.com">Email</a>
+      <span>·</span>
+      <a href="https://www.linkedin.com/in/muhammad-yunas"
+         target="_blank"
+         rel="noopener">
+        LinkedIn
+      </a>
+      <span>·</span>
+      <a href="https://muhammad-yunas.com"
+         target="_blank"
+         rel="noopener">
+        Website
+      </a>
+      <span>·</span>
+      <a href="/assets/resume.pdf"
+         target="_blank"
+         rel="noopener">
+        Resume
+      </a>
+    </div>
+    <p class="footer-meta">© <span id="year"></span> Muhammad Yunas · Physical AI & GTM</p>
+  </footer>
 
-.lead {
-  max-width: 72ch;
-  font-size: 1.08rem;
-}
-
-.grid {
-  display: grid;
-  gap: 1rem;
-}
-
-.six-up {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.two-up {
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-
-.card {
-  background: linear-gradient(180deg, rgba(212, 175, 55, 0.08), rgba(31, 20, 8, 0.92));
-  border: 1px solid rgba(212, 175, 55, 0.25);
-  border-radius: 16px;
-  padding: 1.25rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
-}
-
-.featured {
-  border-color: var(--accent-2);
-  box-shadow: 0 0 0 1px rgba(245, 215, 122, 0.15), 0 12px 34px rgba(0, 0, 0, 0.22);
-}
-
-.contact-form {
-  display: grid;
-  gap: 0.65rem;
-}
-
-input,
-textarea,
-button {
-  font: inherit;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  background: #160f08;
-  color: var(--text);
-}
-
-button {
-  width: fit-content;
-  border: 0;
-  border-radius: 10px;
-  padding: 0.7rem 1.05rem;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #221500;
-  font-weight: 800;
-  cursor: pointer;
-}
-
-.site-footer {
-  border-top: 1px solid rgba(212, 175, 55, 0.22);
-  padding: 1.6rem 0;
-  text-align: center;
-  color: #d9c28b;
-}
-
-@media (max-width: 760px) {
-  .header-inner {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-}
+  <script src="script.js"></script>
+</body>
+</html>
