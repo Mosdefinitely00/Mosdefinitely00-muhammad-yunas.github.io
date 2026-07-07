@@ -2,922 +2,220 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Muhammad Yunas | Physical AI & Industrial AI GTM Leader</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <style>
-    :root {
-      --bg: #020617;
-      --bg-alt: #050816;
-      --panel: #0b0f1a;
-      --panel-soft: #0f172a;
-      --gold: #f5c451;
-      --gold-soft: #e3b34a;
-      --gold-deep: #cfa34a;
-      --accent: #38bdf8;
-      --text-main: #f9fafb;
-      --text-muted: #9ca3af;
-      --border: #1f2937;
-      --border-soft: #111827;
-      --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: var(--font);
-      background:
-        radial-gradient(circle at top, #1f2937 0, #020617 45%, #000000 100%);
-      color: var(--text-main);
-      line-height: 1.6;
-      scroll-behavior: smooth;
-    }
-
-    a { color: var(--gold); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    .page {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 1.5rem 1.25rem 3rem;
-    }
-    /* Top nav */
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(14px);
-      background: linear-gradient(to right, #020617ee, #020617dd);
-      border-bottom: 1px solid #0f172a;
-      padding: 0.6rem 0;
-    }
-
-    .nav-inner {
-      max-width: 960px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 0 1.25rem;
-    }
-
-    .nav-brand {
-      font-size: 0.9rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      font-size: 0.8rem;
-    }
-
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      padding: 0.25rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid transparent;
-    }
-
-    .nav-links a:hover {
-      border-color: var(--border);
-      color: var(--gold);
-    }
-
-    /* Hero */
-    header.hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 1.75rem;
-      padding: 2.5rem 0 2rem;
-      align-items: center;
-    }
-
-    .hero-main h1 {
-      font-size: 2.6rem;
-      font-weight: 700;
-      color: var(--gold);
-      margin-bottom: 0.4rem;
-    }
-
-    .hero-main h2 {
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--text-muted);
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-main p {
-      font-size: 0.95rem;
-      color: var(--text-main);
-      margin-bottom: 0.6rem;
-    }
-
-    .hero-tagline {
-      margin-top: 0.75rem;
-      font-size: 0.95rem;
-      color: var(--gold-soft);
-    }
-
-    .hero-meta {
-      margin-top: 0.75rem;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    .hero-meta a {
-      color: var(--accent);
-    }
-
-    .hero-cta-row {
-      margin-top: 1.25rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    .btn-primary {
-      padding: 0.55rem 1.1rem;
-      border-radius: 999px;
-      border: 1px solid var(--gold-soft);
-      background: radial-gradient(circle at top, #f5c45133, #020617);
-      color: var(--gold);
-      font-size: 0.85rem;
-      font-weight: 500;
-      cursor: pointer;
-    }
-
-    .btn-secondary {
-      padding: 0.55rem 1.1rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(15,23,42,0.9);
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      cursor: pointer;
-    }
-
-    .hero-visual {
-      border-radius: 1.1rem;
-      padding: 1.1rem;
-      background:
-        radial-gradient(circle at top, #f5c45122, #020617),
-        linear-gradient(to bottom right, #020617, #020617);
-      border: 1px solid #f5c45144;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-visual-title {
-      font-size: 0.8rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--gold-soft);
-      margin-bottom: 0.4rem;
-    }
-
-    .hero-visual-main {
-      font-size: 0.95rem;
-      color: var(--text-main);
-      margin-bottom: 0.6rem;
-    }
-
-    .hero-visual-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.6rem;
-      margin-top: 0.5rem;
-    }
-
-    .hero-visual-card {
-      border-radius: 0.75rem;
-      padding: 0.6rem;
-      background: rgba(15,23,42,0.9);
-      border: 1px solid #1f2937;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .hero-visual-card span {
-      display: block;
-      font-size: 0.75rem;
-      color: var(--gold-soft);
-      margin-bottom: 0.2rem;
-    }
-    /* Sections */
-    .section {
-      margin-top: 2.75rem;
-    }
-
-    .section-header {
-      margin-bottom: 1rem;
-    }
-
-    .section-header h3 {
-      font-size: 1.2rem;
-      color: var(--gold);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 0.25rem;
-    }
-
-    .section-header p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    .section-divider {
-      border: none;
-      border-top: 1px solid var(--border-soft);
-      margin-bottom: 1.1rem;
-    }
-
-    .section p {
-      font-size: 0.95rem;
-      color: var(--text-main);
-      margin-bottom: 0.75rem;
-    }
-
-    /* Metrics strip */
-    .metrics-strip {
-      margin-top: 0.5rem;
-      padding: 1.5rem 1.25rem;
-      border-radius: 1rem;
-      background:
-        radial-gradient(circle at top, #f5c45122, #020617),
-        linear-gradient(to bottom right, #020617, #020617);
-      border: 1px solid #f5c45144;
-    }
-
-    .metrics-strip h4 {
-      font-size: 0.95rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gold-soft);
-      text-align: center;
-      margin-bottom: 0.35rem;
-    }
-
-    .metrics-subtitle {
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--gold-deep);
-      margin-bottom: 1rem;
-    }
-
-    .metrics-row {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 0.9rem;
-    }
-
-    .metric-card {
-      border-radius: 0.85rem;
-      padding: 0.9rem;
-      background: rgba(15,23,42,0.95);
-      border: 1px solid #1f2937;
-      font-size: 0.85rem;
-    }
-
-    .metric-label {
-      display: block;
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #c9b46a;
-      margin-bottom: 0.25rem;
-    }
-
-    .metric-value {
-      display: block;
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-      color: var(--gold);
-    }
-
-    .metric-note {
-      display: block;
-      font-size: 0.8rem;
-      color: #e5ddaa;
-    }
-
-    /* Industries */
-    .industry-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-      margin-top: 0.5rem;
-    }
-
-    .industry-card {
-      border-radius: 0.9rem;
-      padding: 0.9rem;
-      background: rgba(15,23,42,0.95);
-      border: 1px solid var(--border);
-      font-size: 0.85rem;
-    }
-
-    .industry-title {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--gold);
-      margin-bottom: 0.35rem;
-    }
-
-    .industry-note {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-bottom: 0.4rem;
-    }
-
-    .industry-tag {
-      font-size: 0.75rem;
-      color: var(--accent);
-    }
-
-    /* Story */
-    .story-block {
-      border-radius: 1rem;
-      padding: 1.25rem;
-      background: radial-gradient(circle at top, #0b1120, #020617);
-      border: 1px solid var(--border);
-    }
-
-    .story-block p {
-      font-size: 0.95rem;
-      color: var(--text-main);
-      margin-bottom: 0.8rem;
-    }
-
-    .story-highlight {
-      font-size: 0.9rem;
-      color: var(--gold-soft);
-      margin-top: 0.5rem;
-    }
-    /* Resume */
-    .resume-block {
-      border-radius: 1rem;
-      padding: 1.25rem;
-      background: rgba(15,23,42,0.95);
-      border: 1px solid var(--border);
-      margin-top: 0.5rem;
-    }
-
-    .pill-row {
-      margin-top: 0.75rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
-
-    .pill {
-      padding: 0.3rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.03);
-      font-size: 0.75rem;
-      color: var(--gold-soft);
-    }
-
-    /* My Work */
-    .work-grid {
-      margin-top: 0.5rem;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.9rem;
-    }
-
-    .work-card {
-      border-radius: 0.95rem;
-      padding: 1rem;
-      background: rgba(15,23,42,0.95);
-      border: 1px solid var(--border);
-      font-size: 0.9rem;
-    }
-
-    .work-title {
-      font-weight: 600;
-      color: var(--gold);
-      margin-bottom: 0.3rem;
-    }
-
-    .work-meta {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-bottom: 0.4rem;
-    }
-
-    .work-list {
-      margin-left: 1rem;
-      margin-top: 0.3rem;
-    }
-
-    .work-list li {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-bottom: 0.3rem;
-    }
-
-    /* Case study */
-    .case-block {
-      border-radius: 0.95rem;
-      padding: 1.25rem;
-      background: rgba(15,23,42,0.95);
-      border: 1px solid var(--border);
-      margin-top: 0.5rem;
-    }
-
-    .case-block h4 {
-      font-size: 1rem;
-      color: var(--gold);
-      margin-bottom: 0.5rem;
-    }
-
-    .case-block ul {
-      margin-left: 1rem;
-      margin-top: 0.4rem;
-    }
-
-    .case-block li {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 0.4rem;
-    }
-
-    /* Sense / Analyze / Act */
-    .saa-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.75rem;
-      margin-top: 0.5rem;
-    }
-
-    .saa-card {
-      border-radius: 0.85rem;
-      padding: 0.9rem;
-      background: rgba(15,23,42,0.95);
-      border: 1px solid var(--border);
-      font-size: 0.85rem;
-    }
-
-    .saa-title {
-      font-weight: 600;
-      color: var(--gold);
-      margin-bottom: 0.3rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.8rem;
-    }
-
-    /* Gallery */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.75rem;
-      margin-top: 0.75rem;
-    }
-
-    .gallery-card {
-      border-radius: 0.85rem;
-      padding: 0.8rem;
-      background: rgba(15,23,42,0.95);
-      border: 1px solid var(--border);
-      font-size: 0.8rem;
-    }
-
-    .gallery-title {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--gold-soft);
-      margin-bottom: 0.25rem;
-    }
-
-    .gallery-note {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
-
-    /* Keywords */
-    .keywords {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.5rem;
-    }
-
-    .keyword {
-      padding: 0.3rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.02);
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
-
-    .keyword.highlight {
-      color: var(--gold);
-      border-color: var(--gold-soft);
-    }
-    /* CTA */
-    .cta-block {
-      border-radius: 1rem;
-      padding: 1.25rem;
-      background: radial-gradient(circle at top, #0b1120, #020617);
-      border: 1px solid var(--border);
-    }
-
-    .cta-block p {
-      font-size: 0.95rem;
-      color: var(--text-main);
-      margin-bottom: 0.75rem;
-    }
-
-    footer {
-      text-align: center;
-      padding-top: 2.5rem;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    @media (max-width: 900px) {
-      header.hero {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .metrics-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .industry-grid { grid-template-columns: 1fr; }
-      .saa-grid { grid-template-columns: 1fr; }
-      .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-
-    @media (max-width: 520px) {
-      .metrics-row { grid-template-columns: 1fr; }
-      .gallery-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+  <title>Muhammad Yunas – Physical AI & GTM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO basics -->
+  <meta name="description" content="Muhammad Yunas – Senior Product Marketing leader in Physical AI, Industrial AI, and GTM strategy." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Muhammad Yunas – Physical AI & GTM" />
+  <meta property="og:description" content="Executive portfolio for Physical AI, Industrial AI, and GTM leadership." />
+  <meta property="og:url" content="https://muhammad-yunas.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NG2H7GWNJN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NG2H7GWNJN');
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-	<div class="page">
-    <header class="hero">
-      <div class="hero-main">
-        <h1>Muhammad Yunas</h1>
-        <h2>Physical AI & Industrial AI GTM Leader · Senior Director, Product Marketing</h2>
-        <p>
-          I build revenue engines where AI that senses, reasons, and acts meets the physical world — factories,
-          grids, buildings, infrastructure, and the people who run them.
-        </p>
-        <p class="hero-tagline">
-          Listen Deeply, Clarify Relentlessly, Execute Decisively.
-        </p>
-        <p class="hero-meta">
-          New York, NY · <a href="mailto:Yunasmuh@gmail.com">Yunasmuh@gmail.com</a> · (401) 248-3664 ·
-          <a href="https://linkedin.com/in/muhammadyunas" target="_blank">linkedin.com/in/muhammadyunas</a>
-        </p>
-        <div class="hero-cta-row">
-          <a href="work.html" class="btn-primary">View My Work</a>
-          <button class="btn-secondary" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">
-            Read My Story
-          </button>
-        </div>
-      </div>
+  <header class="site-header">
+    <div class="logo-mark">MY</div>
+    <nav class="top-nav">
+      <a href="#about">About</a>
+      <a href="#story">Story</a>
+      <a href="#work">Work</a>
+      <a href="#portfolio">Visual Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-      <div class="hero-visual">
-        <div class="hero-visual-title">Physical AI · Hybrid Premium</div>
-        <div class="hero-visual-main">
-          A cinematic view of the Physical AI decade — where OT, IT, and AI converge across factories, grids,
-          buildings, and frictionless retail.
-        </div>
-        <div class="hero-visual-grid">
-          <div class="hero-visual-card">
-            <span>Industrial Cinematic</span>
-            Manufacturing lines, control rooms, and SCADA screens — the physical world rendered as a computable
-            system.
-          </div>
-          <div class="hero-visual-card">
-            <span>Executive Gold</span>
-            Gold-on-black UI, premium typography, and a narrative built for boards, CFOs, CISOs, and GTM leaders.
-          </div>
-          <div class="hero-visual-card">
-            <span>Signals & Telemetry</span>
-            Metrics, pipelines, and category language that show how Physical AI becomes a revenue engine.
-          </div>
-          <div class="hero-visual-card">
-            <span>Story Arc</span>
-            From DCIM to cyber-physical resilience to Physical AI GTM — a creator’s journey, not a job history.
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <section class="section" id="about">
-      <div class="section-header">
-        <h3>About</h3>
-        <p>Physical AI · Industrial AI · Industrial GTM</p>
-      </div>
-      <hr class="section-divider" />
-      <p>
-        Physical AI is not a software category — it is the first industrial paradigm built for atoms, not bits.
-        My work focuses on helping companies commercialize AI systems that sense the physical world, analyze with
-        physics-aware, consequence-driven intelligence, and act at autonomy levels aligned to operational risk.
-      </p>
-      <p>
-        From DCIM at Schneider Electric to cyber-physical resilience at Dell Technologies to Physical AI and
-        Industrial AI advisory today, my career is defined by one repeatable act: entering technically complex,
-        long-cycle B2B markets early and building the GTM architecture that converts buyer skepticism into signed
-        contracts at scale.
-      </p>
-      <p>
-I bridge the OT/IT divide, serving as the quarterback between product management and sales — translating
-        Industrial AI and Industry 4.0 capabilities into buyer narratives that compress sales cycles, expand market share,
-        and generate pipeline that compounds.
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-left">
+      <p class="hero-kicker">Physical AI · Industrial AI · GTM</p>
+      <h1 class="hero-title">Muhammad Yunas</h1>
+      <p class="hero-subtitle">Senior Product Marketing & GTM Leader</p>
+      <p class="hero-tagline">
+        I design and launch systems where <span class="tagline-highlight">sense, analyze, and act</span> are not buzzwords—they’re the operating model.
       </p>
 
-      <div class="metrics-strip">
-        <h4>Performance Telemetry</h4>
-        <p class="metrics-subtitle">
-          Listen Deeply, Clarify Relentlessly, Execute Decisively.
-        </p>
-        <div class="metrics-row">
-          <div class="metric-card">
-            <span class="metric-label">Revenue Influenced</span>
-            <span class="metric-value">$150M+</span>
-            <span class="metric-note">Enterprise deals and portfolios moved from potential to signed revenue.</span>
-          </div>
-          <div class="metric-card">
-            <span class="metric-label">Net-New Pipeline</span>
-            <span class="metric-value">$24M</span>
-            <span class="metric-note">Structured GTM programs that created new qualified opportunities.</span>
-          </div>
-          <div class="metric-card">
-            <span class="metric-label">Win-Rate Lift</span>
-            <span class="metric-value">+42%</span>
-            <span class="metric-note">Repositioning that turned features into executive-level business cases.</span>
-          </div>
-          <div class="metric-card">
-            <span class="metric-label">Market Share</span>
-            <span class="metric-value">12% → 38%</span>
-            <span class="metric-note">Category-defining GTM that captured and defended industrial territory.</span>
-          </div>
-        </div>
+      <div class="hero-cta-row">
+        <a href="/assets/resume.pdf"
+           class="btn btn-primary"
+           target="_blank"
+           rel="noopener"
+           onclick="gtag('event', 'resume_download', { event_category: 'engagement' });">
+          Download Resume
+        </a>
+        <a href="mailto:Yunasmuh@gmail.com" class="btn btn-secondary">
+          Email
+        </a>
       </div>
-    </section>
-    <section class="section" id="story">
-      <div class="section-header">
-        <h3>My Story</h3>
-        <p>How Physical AI Found Its Voice</p>
-      </div>
-      <hr class="section-divider" />
-      <div class="story-block">
-        <p>
-          I didn’t stumble into Physical AI — I grew into it. Long before the term existed, I was already living at the
-          intersection of the physical world and the digital one. I grew up around systems that had to work — buildings,
-          infrastructure, equipment, people — and I learned early that the real world doesn’t tolerate guesswork. You
-          listen deeply, you understand the full picture, and then you act with precision. That instinct became the
-          foundation of my entire career.
-        </p>
-        <p>
-          DCIM at Schneider Electric was the spark. That’s where I first saw the truth: the physical world was generating
-          signals, but no one was listening to them properly. No one was translating them into decisions. No one was
-          building the commercial language for what would eventually become Physical AI. So I helped define the DCIM
-          category from scratch — not as “software for data centers,” but as the first real attempt to give physical
-          infrastructure a digital nervous system.
-        </p>
-        <p>
-          Then came the convergence. At Dell, I reframed cybersecurity as cyber-physical resilience — connecting data
-          protection to uptime, safety, and operational continuity. At Uptake, I bridged OT and IT for predictive
-          maintenance and asset intelligence. At UST, I repositioned capabilities as Physical Operations Intelligence to
-          unlock manufacturing, supply chain, and engineering buyers. Every role was another piece of the same puzzle:
-          how do you commercialize intelligence that lives in the physical world?
-        </p>
-        <p>
-          Now the world has finally caught up. OT systems, facility management, SCADA, buildings, sensors, Bluetooth
-          labels, frictionless retail — everything is converging with IT. The physical world is becoming computable. And
-          the market is ready for the category I’ve been building toward for 20 years.
-        </p>
-        <p>
-          This is why my operating system matters:
-          <strong>Listen Deeply, Clarify Relentlessly, Execute Decisively.</strong>
-          It’s not a tagline — it’s the discipline required to translate complexity into clarity, to align OT and IT, to
-          build trust with operators and executives, and to turn emerging technology into enterprise-scale revenue.
-        </p>
-        <p>
-          You can find people with technical depth. You can find people with GTM experience. You can find people with EQ.
-          But finding someone who has all three — and has spent nearly two decades stitching them together across
-          Schneider, Dell, Uptake, UST, and Physical AI advisory — that’s rare. That’s the story I bring into every room:
-          the creator’s perspective, the operator’s empathy, and the strategist’s precision — all aligned to help
-          organizations win the Physical AI decade.
-        </p>
-        <p class="story-highlight">
-          This site is built to reflect that arc — not as a résumé, but as a category creator’s portfolio.
-        </p>
-      </div>
-    </section>
 
-    <section class="section" id="work">
-      <div class="section-header">
-        <h3>My Work</h3>
-        <p>Selected Examples of Physical AI GTM in Action</p>
+      <div class="hero-links">
+        <a href="https://www.linkedin.com/in/muhammad-yunas"
+           target="_blank"
+           rel="noopener"
+           onclick="gtag('event', 'linkedin_click', { event_category: 'engagement' });">
+          LinkedIn
+        </a>
+        <span class="hero-separator">·</span>
+        <a href="https://muhammad-yunas.com"
+           target="_blank"
+           rel="noopener"
+           onclick="gtag('event', 'website_click', { event_category: 'engagement' });">
+          Website
+        </a>
       </div>
-      <hr class="section-divider" />
-      <p>
-        Below are selected examples of the work I’ve led — not as isolated projects, but as proof of how
-        Listen Deeply, Clarify Relentlessly, Execute Decisively shows up in real GTM systems.
-      </p>
-      <div class="work-grid">
-        <div class="work-card">
-          <div class="work-title">Defining DCIM & Physical AI Foundations</div>
-          <div class="work-meta">Schneider Electric · Director / Senior Director, PMM</div>
-          <ul class="work-list">
-            <li>Defined and commercialized the DCIM category from inception — giving physical infrastructure a digital nervous system.</li>
-            <li>Connected DCIM, facility management, and smart building signals into a coherent story that prefigured modern Physical AI.</li>
-            <li>Drove $32M revenue across 12+ launches with 45% first-year adoption; expanded TAM by $120M via analyst-led category design.</li>
-          </ul>
-        </div>
+    </div>
 
-        <div class="work-card">
-          <div class="work-title">Cyber-Physical Resilience Narrative</div>
-          <div class="work-meta">Dell Technologies · Senior Director, PMM</div>
-          <ul class="work-list">
-            <li>Reframed backup and recovery as cyber-physical resilience for asset-intensive enterprises.</li>
-            <li>Improved competitive win rates by 42%, grew market share 37%, and achieved division-best NPS (+25 points).</li>
-            <li>Used NLP-based social listening to anticipate market shifts ~3 months ahead of competitors.</li>
-          </ul>
-        </div>
+    <div class="hero-right">
+      <div class="persona-wrapper">
+        <img src="assets/persona.png"
+             alt="Executive portrait of Muhammad Yunas"
+             class="persona-image" />
+      </div>
+    </div>
+  </section>
 
-        <div class="work-card">
-          <div class="work-title">OT/IT Convergence for Industrial AI</div>
-          <div class="work-meta">Uptake Technologies · VP, Product Marketing</div>
-          <ul class="work-list">
-            <li>Bridged OT and IT buyer languages for predictive maintenance and asset performance management.</li>
-            <li>Reduced enterprise sales cycles by 40% and increased target account engagement by 35%.</li>
-            <li>Eliminated $2M in wasted ad spend via AI-driven industrial segmentation and precision targeting.</li>
-          </ul>
-        </div>
+  <!-- NARRATION BUBBLE (BOTTOM RIGHT) -->
+  <div id="personaNarration" class="persona-narration"></div>
 
-        <div class="work-card">
-          <div class="work-title">Physical Operations Intelligence</div>
-          <div class="work-meta">UST Global · Senior Director, Product Marketing</div>
-          <ul class="work-list">
-            <li>Repositioned capabilities as Physical Operations Intelligence for manufacturing, supply chain, and engineering buyers.</li>
-            <li>Drove $9M new revenue (30% YoY) and built the largest regional pipeline in company history.</li>
-            <li>Tripled conversion rates via ML-driven buyer journeys; reduced CAC by 15%; surfaced $10M in new opportunity.</li>
-          </ul>
-        </div>
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>About</h2>
+    <p>
+      I operate at the intersection of Physical AI, Industrial AI, and GTM strategy—translating complex systems into narratives
+      that executives can act on and operators can trust.
+    </p>
+  </section>
 
-        <div class="work-card">
-          <div class="work-title">Physical AI & Industrial AI Advisory</div>
-          <div class="work-meta">Independent · Senior Director, PMM (Interim & Fractional)</div>
-          <ul class="work-list">
-            <li>Architect GTM frameworks for AI systems that sense, reason, and act in the physical world.</li>
-            <li>Advise on OT/IT convergence, predictive operations, and cyber-physical security narratives for enterprise B2B organizations.</li>
-            <li>Mentor GTM leaders with an 80% promotion rate — teaching them to think in systems, not slides.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+  <!-- STORY -->
+  <section id="story" class="section">
+    <h2>Story</h2>
+    <p>
+      My work centers on building clarity in environments where telemetry, signals, and constraints collide. I focus on
+      narrative, positioning, and system design that make transformation feel inevitable instead of optional.
+    </p>
+  </section>
 
-    <section class="section" id="case-study">
-      <div class="section-header">
-        <h3>GTM Case Study</h3>
-        <p>Building a Physical AI Revenue Engine</p>
-      </div>
-      <hr class="section-divider" />
-      <div class="case-block">
-        <h4>Building a $40M+ ARR Engine in 30 Months</h4>
-        <p>
-          A Physical AI platform had world-class engineering and a GTM motion held together with duct tape.
-          I rebuilt it from the ground up, turning technical differentiation into a repeatable revenue engine.
-        </p>
-        <ul>
-          <li><strong>ICP Redefined:</strong> Discrete manufacturing, energy & utilities, and oil & gas — asset-intensive operations with measurable downtime cost.</li>
-          <li><strong>Category Narrative:</strong> “Physical AI Operations” — AI that sees, reasons, and acts in the physical world.</li>
-          <li><strong>Sales Motion:</strong> OT discovery, POC modeled on digital twin principles, then full deployment.</li>
-          <li><strong>Partner Ecosystem:</strong> Global SIs, OEM channels, and hyperscaler co-sell (AWS, Azure) driving 35% partner-sourced ARR.</li>
-          <li><strong>Board-Level Narrative:</strong> Cyber-physical resilience framing that lifted ACV by 40% and unlocked CISO and risk budgets.</li>
-        </ul>
-      </div>
-    </section>
+  <!-- WORK -->
+  <section id="work" class="section">
+    <h2>Selected Work</h2>
+    <p>
+      From industrial platforms to Physical AI deployments, I’ve led GTM and product marketing motions that align
+      executive intent with operational reality.
+    </p>
+  </section>
 
-    <section class="section" id="sense-analyze-act">
-      <div class="section-header">
-        <h3>Sense · Analyze · Act</h3>
-        <p>How My GTM Philosophy Mirrors Physical AI</p>
-      </div>
-      <hr class="section-divider" />
-      <p>
-        My GTM philosophy mirrors how modern Physical AI platforms think about the world — systems that sense, analyze,
-        and act — but it is grounded in a human operating system:
-        <strong>Listen Deeply, Clarify Relentlessly, Execute Decisively.</strong>
-      </p>
-      <div class="saa-grid">
-        <div class="saa-card">
-          <div class="saa-title">Sense</div>
-          <p>
-            Listen deeply to signals from SCADA, sensors, enterprise systems, and the people who run them — so the
-            data story is clear before we ever design a playbook.
-          </p>
-        </div>
-        <div class="saa-card">
-          <div class="saa-title">Analyze</div>
-          <p>
-            Clarify relentlessly how consequence models, physics-aware logic, and AI predictions translate into
-            business outcomes that executives, operators, and partners can all agree on.
-          </p>
-        </div>
-        <div class="saa-card">
-          <div class="saa-title">Act</div>
-          <p>
-            Execute decisively by designing GTM systems that move organizations from human-required to human-in-the-loop,
-            supervised automation, and full autonomy — commercially and operationally.
-          </p>
-        </div>
-      </div>
-    </section>
+  <!-- CASE STUDY -->
+  <section id="case-study" class="section">
+    <h2>Case Study: Sense · Analyze · Act</h2>
+    <p>
+      A transformation program where sensing infrastructure, analytical models, and action layers were unified into a single
+      narrative and operating rhythm—reducing friction, increasing adoption, and clarifying value.
+    </p>
+  </section>
 
-    <section class="section">
-      <div class="section-header">
-        <h3>Visual Portfolio</h3>
-        <p>Hybrid Premium · Executive Gold · Industrial Cinematic</p>
-      </div>
-      <hr class="section-divider" />
-      <p>
-        A high-level visual summary of the worlds I operate in — factories, grids, buildings, cyber-physical systems,
-        and frictionless retail — rendered through an executive gold lens.
-      </p>
-      <div class="gallery-grid">
-        <div class="gallery-card">
-          <div class="gallery-title">Factory Floor Intelligence</div>
-          <div class="gallery-note">
-            Visualizing predictive operations, edge AI, and OT telemetry across manufacturing lines.
-          </div>
-        </div>
-        <div class="gallery-card">
-          <div class="gallery-title">Grid & SCADA Resilience</div>
-          <div class="gallery-note">
-            Control rooms, SCADA screens, and grid infrastructure — cyber-physical resilience in motion.
-          </div>
-        </div>
-        <div class="gallery-card">
-          <div class="gallery-title">Smart Buildings & DCIM</div>
-          <div class="gallery-note">
-            Data centers, building systems, and DCIM dashboards — the origin of Physical AI narratives.
-          </div>
-        </div>
-        <div class="gallery-card">
-          <div class="gallery-title">Frictionless Retail</div>
-          <div class="gallery-note">
-            Bluetooth labels, real-time inventory, and customer experience powered by Physical AI.
-          </div>
-        </div>
-        <div class="gallery-card">
-          <div class="gallery-title">Industrial Cyber-Physical</div>
-          <div class="gallery-note">
-            Security, continuity, and consequence modeling across OT and IT environments.
-          </div>
-        </div>
-        <div class="gallery-card">
-          <div class="gallery-title">Executive GTM War Room</div>
-          <div class="gallery-note">
-            Metrics, pipelines, and narratives that align boards, CFOs, CISOs, and GTM teams.
-          </div>
-        </div>
-      </div>
-    </section>
+  <!-- SENSE · ANALYZE · ACT -->
+  <section id="sense-analyze-act" class="section">
+    <h2>Sense · Analyze · Act</h2>
+    <p>
+      Precision isn’t optional—it’s the operating system. I design GTM and product narratives that respect constraints,
+      elevate signals, and make decisions feel grounded instead of speculative.
+    </p>
+  </section>
 
-    <section class="section" id="contact">
-      <div class="section-header">
-        <h3>Let’s Define What Comes Next</h3>
-        <p>Physical AI · GTM · Category Creation</p>
-      </div>
-      <hr class="section-divider" />
-      <div class="cta-block">
-        <p>
-          You are building something ambitious — something that touches the physical world, not just the digital one.
-          If you need a GTM leader who can build the category, architect the revenue engine, align OT, IT, and risk,
-          win enterprise trust, and turn technical differentiation into commercial inevitability, then we should talk.
-        </p>
-        <p>
-          <strong>Listen Deeply, Clarify Relentlessly, Execute Decisively.</strong>
-        </p>
-        <p>
-          Email: <a href="mailto:Yunasmuh@gmail.com">Yunasmuh@gmail.com</a><br />
-          LinkedIn: <a href="https://linkedin.com/in/muhammadyunas" target="_blank">linkedin.com/in/muhammadyunas</a><br />
-          Location: New York, NY
-        </p>
-      </div>
-    </section>
+  <!-- VISUAL PORTFOLIO (CARDS MOVED HERE) -->
+  <section id="portfolio" class="section">
+    <h2>Visual Portfolio</h2>
+    <p>Every frame is a signal. Every signal tells a story.</p>
 
-    <footer>
-      © 2026 · Muhammad Yunas · Physical AI & Industrial AI GTM Leader
-    </footer>
-  </div>
+    <div class="portfolio-grid">
+      <article class="portfolio-card">
+        <h3>Industrial Cinematic</h3>
+        <p>Visual language tuned to industrial systems, telemetry, and motion.</p>
+      </article>
+      <article class="portfolio-card">
+        <h3>Executive Gold</h3>
+        <p>Premium aesthetic that aligns with boardroom expectations and operator reality.</p>
+      </article>
+      <article class="portfolio-card">
+        <h3>Signals & Telemetry</h3>
+        <p>Frames that highlight data as narrative, not noise.</p>
+      </article>
+      <article class="portfolio-card">
+        <h3>Story Arc</h3>
+        <p>Visual sequences that carry a clear before/after transformation story.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-contact">
+    <h2>Contact</h2>
+    <p>Good work. Let’s continue building forward.</p>
+
+    <div class="contact-links">
+      <a href="mailto:Yunasmuh@gmail.com" class="btn btn-primary">Email</a>
+      <a href="https://www.linkedin.com/in/muhammad-yunas"
+         target="_blank"
+         rel="noopener"
+         class="btn btn-secondary"
+         onclick="gtag('event', 'linkedin_click', { event_category: 'engagement' });">
+        LinkedIn
+      </a>
+      <a href="https://muhammad-yunas.com"
+         target="_blank"
+         rel="noopener"
+         class="btn btn-secondary"
+         onclick="gtag('event', 'website_click', { event_category: 'engagement' });">
+        Website
+      </a>
+      <a href="/assets/resume.pdf"
+         target="_blank"
+         rel="noopener"
+         class="btn btn-secondary"
+         onclick="gtag('event', 'resume_download', { event_category: 'engagement' });">
+        Download Resume
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="mailto:Yunasmuh@gmail.com">Email</a>
+      <span>·</span>
+      <a href="https://www.linkedin.com/in/muhammad-yunas"
+         target="_blank"
+         rel="noopener">
+        LinkedIn
+      </a>
+      <span>·</span>
+      <a href="https://muhammad-yunas.com"
+         target="_blank"
+         rel="noopener">
+        Website
+      </a>
+      <span>·</span>
+      <a href="/assets/resume.pdf"
+         target="_blank"
+         rel="noopener">
+        Resume
+      </a>
+    </div>
+    <p class="footer-meta">© <span id="year"></span> Muhammad Yunas · Physical AI & GTM</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
