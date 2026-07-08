@@ -1,15 +1,172 @@
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Executive portfolio loaded.");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Muhammad Yunas – Physical AI & Agentic AI GTM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Senior Director, Product Marketing – Physical AI & Industrial Intelligence. GTM, category creation, and industrial autonomy." />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-  // Smooth scroll for nav links
-  document.querySelectorAll(".nav-list a").forEach(link => {
-    link.addEventListener("click", event => {
-      event.preventDefault();
-      const targetId = link.getAttribute("href");
-      const target = document.querySelector(targetId);
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth" });
-      }
-    });
-  });
-});
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <div class="brand">
+        <span class="brand-mark">MY</span>
+        <span class="brand-text">Muhammad Yunas</span>
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#hero">Overview</a></li>
+          <li><a href="#about">Profile</a></li>
+          <li><a href="#impact">Impact</a></li>
+          <li><a href="#resume">Resume</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="section hero">
+    <div class="container">
+      <p class="eyebrow">Senior Director · Product Marketing</p>
+
+      <h1>
+        Physical AI & Industrial Intelligence<br />
+        <span style="color: var(--accent-2); font-size: 1.4rem;">
+          Category Creation · GTM · Narrative Control
+        </span>
+      </h1>
+
+      <p class="lead">
+        I build and scale GTM systems for Physical AI, Agentic AI, and industrial autonomy—
+        where software, sensors, and operations converge into one intelligent fabric.
+      </p>
+
+      <!-- Persona Bubble -->
+      <div class="card" style="margin-top: 2rem;">
+        <h3>Persona · Physical AI GTM</h3>
+        <p>
+          “My work sits at the intersection of AI, industrial systems, and executive narrative.
+          I turn complex, cyber‑physical products into clear, defensible stories that win markets,
+          not just mindshare.”
+        </p>
+      </div>
+
+      <!-- Persona Image -->
+      <div class="card" style="margin-top: 2rem; text-align:center;">
+        <img src="assets/persona-stylized.png"
+             alt="Stylized Physical AI persona"
+             style="width: 100%; max-width: 420px; border-radius: 14px;" />
+        <p style="margin-top: 0.5rem; color: var(--accent-2);">
+          Physical AI · Agentic AI · Industrial Autonomy
+        </p>
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <a class="btn" href="#resume">View Executive Resume</a>
+        <a class="btn" href="#impact" style="margin-left: 1rem;">See GTM & Impact</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>Profile · Executive Narrative</h2>
+
+      <p class="lead">
+        I operate as a Senior Director‑level Product Marketing leader focused on Physical AI,
+        Agentic AI, and industrial intelligence—owning GTM, positioning, and executive‑grade
+        storytelling for complex, cyber‑physical products.
+      </p>
+
+      <div class="card" style="margin-top: 2rem;">
+        <img src="assets/portrait.png"
+             alt="Formal portrait of Muhammad Yunas"
+             style="width: 100%; max-width: 360px; border-radius: 14px;" />
+        <p style="margin-top: 1rem;">
+          <strong>Location:</strong> West Islip, NY · Long Island<br />
+          <strong>Role:</strong> Senior Director, Product Marketing<br />
+          <strong>Domains:</strong> Physical AI, Agentic AI, Industrial Intelligence
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section id="impact" class="section">
+    <div class="container">
+      <h2>Selected Impact · Physical AI & Industrial Systems</h2>
+
+      <div class="grid six-up" style="margin-top: 2rem;">
+        <div class="card">
+          <h3>Physical Operations Intelligence Platform</h3>
+          <p>
+            Led GTM and narrative for a cyber‑physical operations platform unifying sensors,
+            control systems, and AI into a single operational intelligence layer—positioned as
+            the “control plane” for physical infrastructure.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Agentic AI for Industrial Autonomy</h3>
+          <p>
+            Defined category language and GTM motion for agentic AI systems orchestrating
+            workflows across plants, facilities, and field operations—bridging AI decision‑making
+            with real‑world constraints and safety.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Executive Narrative & Board‑Level Storytelling</h3>
+          <p>
+            Built executive‑grade narratives for complex AI and industrial products, aligning
+            C‑suite, product, and sales around a single, defensible story that survives scrutiny
+            from boards, customers, and regulators.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume" class="section">
+    <div class="container">
+      <h2>Executive Resume · Physical AI & GTM</h2>
+
+      <p class="lead">
+        Full detail on roles, impact, GTM systems, and category creation across Physical AI,
+        industrial autonomy, and operational intelligence.
+      </p>
+
+      <a class="btn" href="assets/resume.pdf" target="_blank">Open Executive Resume (PDF)</a>
+
+      <div class="card" style="margin-top: 2rem;">
+        <h3>Contact & Signals</h3>
+        <p>
+          <strong>Email:</strong> yunasmuh@gmail.com<br />
+          <strong>Phone:</strong> 401‑248‑3664<br />
+          <strong>Location:</strong> West Islip, NY · Long Island
+        </p>
+        <p>
+          Available for roles where Physical AI, agentic systems, and industrial intelligence
+          are core to the product and the story—Senior Director, VP, or Head of Product
+          Marketing / GTM.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      Muhammad Yunas · Physical AI · Agentic AI · Industrial Intelligence<br />
+      748 Pine Ave · West Islip, NY 11795
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
