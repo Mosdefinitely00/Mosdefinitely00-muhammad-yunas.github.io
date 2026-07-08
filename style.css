@@ -538,3 +538,149 @@ button {
     opacity: 0.25;
     pointer-events: none;
 }
+
+/***************************************************************
+ * A) HOVER MICRO‑INTERACTIONS — GLOBAL UI POLISH
+ ***************************************************************/
+
+.hover-lift {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(255, 211, 105, 0.25);
+}
+
+.hover-gold {
+    transition: color 0.25s ease;
+}
+
+.hover-gold:hover {
+    color: #ffd369;
+}
+
+.hover-underline {
+    position: relative;
+}
+
+.hover-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #ffd369;
+    transition: width 0.25s ease;
+}
+
+.hover-underline:hover::after {
+    width: 100%;
+}
+
+/***************************************************************
+ * B) PERSONA GLOW SYNC WITH NARRATION
+ ***************************************************************/
+
+.hero-portrait {
+    transition: box-shadow 0.6s ease;
+}
+
+.hero-portrait.glow {
+    box-shadow: 0 0 70px rgba(255, 211, 105, 0.35);
+}
+
+/***************************************************************
+ * C) SCROLL‑ACTIVATED GOLD SWEEPS — SECTION HEADERS
+ ***************************************************************/
+
+.section-title {
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, #ffd369, #ffcc55);
+    transition: width 1.2s ease;
+}
+
+.section-title.visible::after {
+    width: 100%;
+}
+
+/***************************************************************
+ * D) GLOBAL SPACING + TYPOGRAPHY REFINEMENT
+ ***************************************************************/
+
+body {
+    font-family: "Inter", "Segoe UI", sans-serif;
+    color: #e8e8e8;
+    background: #0d0d0d;
+    line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 52px;
+    margin-bottom: 1.2rem;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 28px;
+    margin-bottom: 0.8rem;
+}
+
+/* Paragraphs */
+p {
+    font-size: 20px;
+    color: #d0d0d0;
+    margin-bottom: 1.4rem;
+}
+
+/* Section spacing */
+section {
+    padding: 4rem 2rem;
+}
+
+/* Cards */
+.card {
+    background: #111;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #222;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(255, 211, 105, 0.25);
+}
+
+
+
+
