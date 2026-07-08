@@ -238,3 +238,18 @@ window.addEventListener('scroll', () => {
     “Physical AI is where silicon meets steel — and where your GTM strategy becomes a force multiplier.”
 </div>
 
+<button id="themeToggle" class="theme-toggle hover-lift">Toggle Theme</button>
+
+<script>
+const bubble = document.getElementById('personaBubble');
+
+window.addEventListener('scroll', () => {
+    const isMobile = window.innerWidth < 768;
+
+    if (window.scrollY > (isMobile ? 200 : 300)) {
+        bubble.classList.add('visible');
+    } else {
+        bubble.classList.remove('visible');
+    }
+});
+</script>
